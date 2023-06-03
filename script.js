@@ -32,29 +32,42 @@ setTimeout(function () {
   envelope.style.display = "block";
 }, 5000);
 
-setTimeout(function () {
-  var envelope = document.getElementById("envelope");
-  envelope.style.display = "block";
-}, 5000);
-
 function openEnvelope() {
   var envelope = document.getElementById("envelope");
-  envelope.style.display = "none";
+  envelope.style.visibility = "hidden";
 
   var gifContainer = document.createElement("div");
   gifContainer.style.position = "fixed";
-  gifContainer.style.top = "0";
-  gifContainer.style.left = "0";
-  gifContainer.style.width = "100vw";
-  gifContainer.style.height = "100vh";
+  gifContainer.style.top = "50%";
+  gifContainer.style.left = "50%";
+  gifContainer.style.transform = "translate(-50%, -50%)";
   gifContainer.style.zIndex = "9999";
 
   var gif = document.createElement("img");
   gif.src = "Untitled.gif";
   gif.alt = "Animated GIF";
-  gif.style.width = "100%";
-  gif.style.height = "100%";
+
+  var closeButton = document.createElement("button");
+  closeButton.innerHTML = "X";
+  closeButton.style.position = "fixed";
+  closeButton.style.top = "1%";
+  closeButton.style.right = "49%";
+  closeButton.style.zIndex = "9999";
+  closeButton.style.background = "none";
+  closeButton.style.border = "none";
+  closeButton.style.outline = "none";
+  closeButton.style.color = "black";
+  closeButton.style.fontFamily = "Arial";
+  closeButton.style.fontSize = "20px";
+  closeButton.style.cursor = "pointer";
+
+  closeButton.addEventListener("click", function () {
+    gifContainer.remove();
+    envelope.style.visibility = "visible";
+  });
 
   gifContainer.appendChild(gif);
+  gifContainer.appendChild(closeButton);
   document.body.appendChild(gifContainer);
 }
+
