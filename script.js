@@ -26,3 +26,35 @@ function follow(event) {
   }
   
 }
+
+setTimeout(function () {
+  var envelope = document.getElementById("envelope");
+  envelope.style.display = "block";
+}, 5000);
+
+setTimeout(function () {
+  var envelope = document.getElementById("envelope");
+  envelope.style.display = "block";
+}, 5000);
+
+function openEnvelope() {
+  var envelope = document.getElementById("envelope");
+  envelope.style.display = "none";
+
+  var gifContainer = document.createElement("div");
+  gifContainer.style.position = "fixed";
+  gifContainer.style.top = "0";
+  gifContainer.style.left = "0";
+  gifContainer.style.width = "100vw";
+  gifContainer.style.height = "100vh";
+  gifContainer.style.zIndex = "9999";
+
+  var gif = document.createElement("img");
+  gif.src = "Untitled.gif";
+  gif.alt = "Animated GIF";
+  gif.style.width = "100%";
+  gif.style.height = "100%";
+
+  gifContainer.appendChild(gif);
+  document.body.appendChild(gifContainer);
+}
