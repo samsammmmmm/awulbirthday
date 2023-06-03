@@ -33,11 +33,10 @@ setTimeout(function () {
 
 function openEnvelope() {
   var envelope = document.getElementById("envelope");
-  envelope.style.display = "none";
 
-  var message = encodeURIComponent("WHAT DO U WANT??? TELL ME! :3"); // Ganti dengan pesan template yang Anda inginkan
+  var message = encodeURIComponent("WHAT DO U WANT??? TELL ME! :3"); 
 
-  var whatsappLink = "https://wa.me/6281389602147?text=" + message; // Ganti dengan nomor WhatsApp dan pesan template yang sesuai
+  var whatsappLink = "https://wa.me/6281389602147?text=" + message; 
 
   window.open(whatsappLink, "_blank");
 }
