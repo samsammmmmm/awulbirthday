@@ -26,7 +26,6 @@ function follow(event) {
   }
   
 }
-
 setTimeout(function () {
   var envelope = document.getElementById("envelope");
   envelope.style.display = "block";
@@ -36,20 +35,9 @@ function openEnvelope() {
   var envelope = document.getElementById("envelope");
   envelope.style.display = "none";
 
-  var gifContainer = document.createElement("div");
-  gifContainer.style.position = "fixed";
-  gifContainer.style.top = "0";
-  gifContainer.style.left = "0";
-  gifContainer.style.width = "100vw";
-  gifContainer.style.height = "100vh";
-  gifContainer.style.zIndex = "9999";
+  var message = encodeURIComponent("WHAT DO U WANT??? TELL ME! :3"); // Ganti dengan pesan template yang Anda inginkan
 
-  var gif = document.createElement("img");
-  gif.src = "Untitled.gif";
-  gif.alt = "Animated GIF";
-  gif.style.width = "100%";
-  gif.style.height = "100%";
+  var whatsappLink = "https://wa.me/6281389602147?text=" + message; // Ganti dengan nomor WhatsApp dan pesan template yang sesuai
 
-  gifContainer.appendChild(gif);
-  document.body.appendChild(gifContainer);
+  window.open(whatsappLink, "_blank");
 }
