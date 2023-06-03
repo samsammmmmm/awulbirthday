@@ -2473,10 +2473,6 @@
     overflow: hidden;
     height: 100%;
     font-family: "Satisfy";
-    /* background-image: url("Untitled.gif");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center; */
     background: #09447B;
     background: linear-gradient(45deg, #09447B 0, #8f0044 100%);
   }
