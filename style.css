@@ -2485,15 +2485,6 @@
     height: 100%;
   }
 
-  /* #envelope {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    cursor: pointer;
-    z-index: 9999;
-  } */
-
   #background-overlay {
     position: fixed;
     top: 0;
