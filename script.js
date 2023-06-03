@@ -32,11 +32,6 @@ setTimeout(function () {
   envelope.style.display = "block";
 }, 5000);
 
-setTimeout(function () {
-  var envelope = document.getElementById("envelope");
-  envelope.style.display = "block";
-}, 5000);
-
 function openEnvelope() {
   var envelope = document.getElementById("envelope");
   envelope.style.display = "none";
